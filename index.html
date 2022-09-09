@@ -1,6 +1,18 @@
+<html>
 <head>
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
+  <button class="mdc-button foo-button">
+  <div class="mdc-button__ripple"></div>
+  <span class="mdc-button__label">Button</span>
+</button>
 <h1> Hello! </h1>
   <iframe src="https://spatial.io/s/Spatial-iframe-Example-62ec0d9106d5040001db627e?share=8827627404275068838"></iframe>
 </body>
+  <script>
+    mdc.ripple.MDCRipple.attachTo(document.querySelector('.foo-button'));
+  </script>
+</html>
