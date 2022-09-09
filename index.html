@@ -1,4 +1,4 @@
-<html>
+html>
 <head>
     <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
   <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
@@ -26,6 +26,10 @@
   margin: 20px auto;
 }
 
+.logo{
+display: flex;
+margin:auto;
+}
 .button-container {
   display: flex;
   justify-content: flex-end;
@@ -46,6 +50,7 @@
    text-align: center;
    vertical-align: middle;
    ">
+   <img class="logo" src="LogoVespa.svg"> </img>
     <label class="mdc-text-field mdc-text-field--filled username">
       <span class="mdc-text-field__ripple"></span>
       <input type="text" class="mdc-text-field__input" aria-labelledby="username-label" name="username" required>
@@ -67,9 +72,5 @@
       </button>
   </form>
     </div>
-  <script type="text/javascript">
-    mdc.ripple.MDCRipple.attachTo(document.querySelector('.foo-button'));
-  </script>
     </body>
- 
 </html>
