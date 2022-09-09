@@ -5,18 +5,42 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
       <style>
-    .css-vh-center {
-        position: fixed; /* or absolute */
-        top: 50%;
-        left: 50%;
-        /* bring your own prefixes */
-        transform: translate(-50%, -50%);
-    }
+@import "@material/textfield/mdc-text-field";
+@import "@material/button/mdc-button";
+
+.header {
+  text-align: center;
+}
+
+.shrine-logo {
+  width: 150px;
+  height: 150px;
+  padding-top: 80px;
+  fill: currentColor;
+}
+
+.username,
+.password {
+  display: flex;
+  width: 300px;
+  margin: 20px auto;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 300px;
+  margin: auto;
+}
+
+.button-container button {
+  margin: 3px;
+}
+
 </style>
 <body>
      <iframe src="https://spatial.io/s/Spatial-iframe-Example-62ec0d9106d5040001db627e?share=8827627404275068838" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; "></iframe>
 
-  <div class=".css-vh-center">
   <form action="home.html">
     <label class="mdc-text-field mdc-text-field--filled username">
       <span class="mdc-text-field__ripple"></span>
@@ -37,7 +61,6 @@
           Next
         </span>
       </button>
-    </div>
   </form>
     </div>
   <script type="text/javascript">
