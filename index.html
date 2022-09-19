@@ -128,13 +128,13 @@ margin:auto;
    <h1 style="font-family:Debug; font-size:170px; color:white; margin: auto 20px;">VESPAVERSE</h1>
     <label class="mdc-text-field mdc-text-field--filled username">
       <span class="mdc-text-field__ripple"></span>
-      <input type="text" class="mdc-text-field__input  input-t" onchange="onChangeU()" aria-labelledby="username-label" name="username" required>
+      <input type="text" class="mdc-text-field__input  input-t" onchange="onChangeU(this.value)" onclick="onClickU()" aria-labelledby="username-label" name="username" required>
       <span class="mdc-floating-label input-l" id="username-label">Username</span>
       <span class="mdc-line-ripple"></span>
     </label>
     <label class="mdc-text-field mdc-text-field--filled password">
       <span class="mdc-text-field__ripple"></span>
-      <input type="password" class="mdc-text-field__input input-t" onchange="onChangeP()" aria-labelledby="password-label" name="password" required minlength="8">
+      <input type="password" class="mdc-text-field__input input-t" onchange="onChangeP(this.value)" onclick="onClickP()" aria-labelledby="password-label" name="password" required minlength="8">
       <span class="mdc-floating-label input-l" id="password-label">Password</span>
       <span class="mdc-line-ripple"></span>
     </label>
@@ -162,15 +162,32 @@ margin:auto;
   } else {
     x.style.display = "none";
   }
-}
-		
-		function onChangeU(){
+}	function onClickU(){
 		 var x = document.getElementById("username-label");
 			 x.style.display = "none";
 		}
-		function onChangeP(){
+		function onClickP(){
 		 var x = document.getElementById("password-label");
 			 x.style.display = "none";
+		}
+		
+		function onChangeU(val){
+		 var x = document.getElementById("username-label");
+			if(val!=""){
+			 x.style.display = "none";
+		}else{
+			
+			 x.style.display = "block";
+		}
+		}
+		function onChangeP(val){
+		 var x = document.getElementById("password-label");
+				if(val!=""){
+			 x.style.display = "none";
+		}else{
+			
+			 x.style.display = "block";
+		}
 		}
 	</script>
 </html>
