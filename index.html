@@ -96,7 +96,7 @@ margin:auto;
 	justify-content: center;
 	background-image: url("BOTTONE LOGIN.png");
 	background-size: 100% 100%;
-	background-color: rgba(0,0,0,0);
+	background-color: rgba(0,0,0,0) !important;
 	margin: auto;
 	width: 200px;
 	height: 70px;
@@ -108,12 +108,12 @@ margin:auto;
 	      }
  
 .input-l{
-	color:white;
+	color:white !important;
 	font-family: 'Segoe UI Regular';
 }
 
 .input-t{
-	color:white;
+	color:white !important;
 	font-family: 'Segoe UI Regular';
 }
 </style>
@@ -128,14 +128,14 @@ margin:auto;
    <h1 style="font-family:Debug; font-size:170px; color:white; margin: auto 20px;">VESPAVERSE</h1>
     <label class="mdc-text-field mdc-text-field--filled username">
       <span class="mdc-text-field__ripple"></span>
-      <input type="text" class="mdc-text-field__input" aria-labelledby="username-label" name="username" required>
-      <span class="mdc-floating-label" id="username-label">Username</span>
+      <input type="text" class="mdc-text-field__input  input-t" onchange="onChangeU()" aria-labelledby="username-label" name="username" required>
+      <span class="mdc-floating-label input-l" id="username-label">Username</span>
       <span class="mdc-line-ripple"></span>
     </label>
     <label class="mdc-text-field mdc-text-field--filled password">
       <span class="mdc-text-field__ripple"></span>
-      <input type="password" class="mdc-text-field__input" aria-labelledby="password-label" name="password" required minlength="8">
-      <span class="mdc-floating-label" id="password-label">Password</span>
+      <input type="password" class="mdc-text-field__input input-t" onchange="onChangeP()" aria-labelledby="password-label" name="password" required minlength="8">
+      <span class="mdc-floating-label input-l" id="password-label">Password</span>
       <span class="mdc-line-ripple"></span>
     </label>
     <div class="button-container">
@@ -163,5 +163,14 @@ margin:auto;
     x.style.display = "none";
   }
 }
+		
+		function onChangeU(){
+		 var x = document.getElementById("username-label");
+			 x.style.display = "none";
+		}
+		function onChangeP(){
+		 var x = document.getElementById("password-label");
+			 x.style.display = "none";
+		}
 	</script>
 </html>
