@@ -150,6 +150,7 @@ margin:auto;
 	
    <img class="logo" src="LogoVespa.svg"> </img>
 	</div>
+	
     </body>
 	<script>
 	function hideFunction() {
@@ -159,6 +160,13 @@ margin:auto;
   } else {
     x.style.display = "none";
   }
+		  x = document.getElementById("footer");
+		  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+		
 }	function onClickU(){
 		 var x = document.getElementById("username-label");
 			 x.style.display = "none";
